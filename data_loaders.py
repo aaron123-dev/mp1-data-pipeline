@@ -31,7 +31,7 @@ def load_json(filepath):
     """
     with open(filepath) as f:
         data = json.load(f)
-    logger.info(f"Loaded Json file {filepath}")
+    logger.info(f"Loaded Json file: {filepath}")
     return data 
     
 def load_yaml(filepath):
@@ -40,7 +40,7 @@ def load_yaml(filepath):
     """
     with open(filepath) as y:
         data = yaml.safe_load(y)
-    logger.info(f"Loaded Yaml file {filepath}")
+    logger.info(f"Loaded YAML file: {filepath}")
     return data 
     
 
@@ -60,13 +60,3 @@ def load_data(filepath):
     else:
         logger.error(f"Unsupported file format: {ext}")
         raise ValueError(f"Unsupported file format: {ext}")
-
-
-#Testing the functions I wrote
-
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    # print(load_csv(Path("fixtures/sample.csv")))
-    # print(load_json(Path("fixtures/sample.json")))
-    print(load_yaml(Path("fixtures/sample.yaml")))
-    print(load_data("pipeline.py"))
