@@ -28,7 +28,7 @@ def parse_arguments():
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser(description="End-to-end data pipeline: load, validate, clean, save data")
     parser.add_argument("-i", "--input", required=True, help="Path to the input file")
-    parser.add_argument("-c", "--config", required = True,help ="Path to the YAML configuration file")
+    parser.add_argument("-c", "--config", required = True,help="Path to the YAML configuration file")
     parser.add_argument("-o", "--output", required=True, help="Path to the output file")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose logging")
 
