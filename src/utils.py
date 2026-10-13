@@ -12,8 +12,8 @@ def setup_logging(verbose=False):
      logging.basicConfig(
          level = log_level,
          format="%(asctime)s %(levelname)-8s %(name)s — %(message)s",
-         datefmt= "%H:%M:%S"
-         )
+         datefmt= "%H:%M:%S",
+    )
 
      
 def validate_input(filepath):
