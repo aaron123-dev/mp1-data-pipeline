@@ -31,7 +31,7 @@ def load_json(filepath):
     """
     with open(filepath) as f:
         data = json.load(f)
-    logger.info(f"Loaded Json file: {filepath}")
+    logger.info(f"Loaded JSON file: {filepath}")
     return data 
     
 def load_yaml(filepath):

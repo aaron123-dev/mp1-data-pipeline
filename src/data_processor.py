@@ -7,7 +7,7 @@ def remove_duplicates(df):
     """Remove duplicate rows."""
     before = len(df)
     df = df.drop_duplicates()
-    logger.debug(f"Removed duplicates: {before} -> {len(df)} rows")
+    logger.debug(f"remove_duplicates: {before} -> {len(df)} rows")
     return df
 
 
@@ -93,4 +93,3 @@ def create_cleaning_report(df_before, df_after):
         "columns_after": len(df_after.columns),
         "columns_removed": len(df_before.columns) - len(df_after.columns)
         }
-    
